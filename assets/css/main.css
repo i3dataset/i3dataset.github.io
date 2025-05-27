@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
-@import url("fontawesome-all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/*@import url("fontawesome-all.min.css");*/
 
 /*
 	Miniport by HTML5 UP
@@ -72,7 +72,6 @@ input, select, textarea {
 	appearance: none;
 }
 
-/* Basic */
 
 	html {
 		box-sizing: border-box;
@@ -113,6 +112,11 @@ input, select, textarea {
 		color: #43B3E0;
 		text-decoration: underline;
 	}
+
+		a:link {
+  		  color:  #db293f;
+		  text-decoration: none;
+		}
 
 		a:hover {
 			color: #43bff0 !important;
@@ -205,7 +209,8 @@ input, select, textarea {
 	}
 
 	header {
-		margin: 0 0 3em 0;
+		margin: 0 1 3em 0;
+		line-height: 1.5;
 	}
 
 		header > p {
@@ -1987,9 +1992,10 @@ input, select, textarea {
 /* Wrappers */
 
 	.wrapper {
-		background-image: url("images/bg.png");
+/*		background-image: url("images/bg.png");*/
 		box-shadow: inset 0px 1px 0px 0px rgba(0, 0, 0, 0.05), inset 0px 2px 3px 0px rgba(0, 0, 0, 0.1);
 		padding: 8em 0 8em 0;
+		clear: both;
 		text-align: center;
 	}
 
