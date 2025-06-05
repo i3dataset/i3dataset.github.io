@@ -10,21 +10,44 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Remove top margin/padding without relying on .wrapper */
+			html, body {
+				margin: 0;
+				padding: 0;
+			}
+			body.is-preload > article#top {
+				margin-top: 0 !important;
+				padding-top: 0 !important;
+			}
+		</style>		
 	</head>
+
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-BNXNQY2PST"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-BNXNQY2PST');
+	</script>	
+	
 	<body class="is-preload">
 
 		<!-- Nav -->
-<!-- 			<nav id="nav">
+			<nav id="nav">
 				<ul class="container">
 					<li><a href="index.html">Homepage</a></li>
-					<li><a href="generic.html">The Book</a></li>
-					<li><a href="dashboard.html">I<sup>3</sup> Dashboard</a></li>		
-					<li><a href="elements.html">I<sup>3</sup> Dataset</a></li>
-					<li><a href="replication.html">Replication Files</a></li>
+					<li><a href="authors.html">The Authors</a></li>
+					<li><a href="book.html">The Book</a></li>
+					<li><a href="dashboard.html">The I<sup>3</sup> Dashboard</a></li>		
+					<li><a href="materials.html">Auxiliary Materials</a></li>
 				</ul>
-			</nav> -->
+			</nav>
 
 		<!-- Home -->
+
 			<article id="top" class="wrapper style1">
 				<div class="container">
 					<div class="row">
@@ -33,13 +56,16 @@
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
-								<h2 >Welcome to Electoral Incentives for Interparty and Intraparty Politics<br /></h2>
-								<p style="color:darkslategrey;">Home of the I<sup>3</sup> Dataset and Dashboard</p>
+								<h2 >Welcome to Website of the <br> Electoral System Incentives for <br> Interparty and Intraparty Politics (I<sup>3</sup>)<br> Project <br /></h2>
+								<!-- <p style="color:darkslategrey;">Home of the I<sup>3</sup> Dataset and Dashboard</p> -->
 							</header>
-							<!-- <p>Electoral systems translate the choices voters make in a general election into seats won by candidates and parties. In the process of this translation, rules influence candidates’ actions during campaigns, voters’ calculus when making a vote choice, and representatives’ decisions about how to spend their time in office, and in so doing, they create incentives for strategic behavior on the part of voters, (pre-)candidates, party elites, and elected representatives, including legislators and their chamber leaders.   All electoral systems share a common set of component rules. Each rule can take on a number of different values. When combining the values taken by these rules into a system, the number of possible combinations is quite large, which means that specific systems have the potential to provide precise, targeted incentives that govern relationships between political parties --- interparty politics --- and within parties --- intraparty politics.</p> -->
-
-							<p style="color:darkslategrey; font-size: 2ex;">We are under construction. Please come back soon.</p>
-							<!-- <p style="color:darkslategrey; font-size: 2ex;">If you use this website, please cite: CITATION DETAILS</p> -->
+	
+							<p style="color:black; font-size: 2ex;">Electoral System Incentives for Interparty and Intraparty Politics uses novel computational tools and the most comprehensive and updated dataset on electoral systems to test whether electoral rules explain variation in interparty politics&mdash;the effective number of parties, parties’ locations in the policy space, congruence between citizens’ preferences and policy&mdash;and intraparty politics&mdash;the content of campaigns, the amount of constituency service provided, the shape of legislative institutions, levels of party discipline, and the balance struck between programmatic policy and pork barrel politics. <br><br> To supplement the book (available from Oxford University Press), this website includes additional material to help users understand how the rules that are components of an electoral system shape the political arena. We make available here an updated version of the dataset used in the book and replication files that will allow users to check and extend our work. We also provide a dashboard that will&mdash;after providing some simple information about an electoral system's component rules&mdash;tell users the type of incentives it will generate for dynamics between parties and relationships within parties. </p>
+							<p style="color:black; font-size: 2ex;">If you use this website, please cite: <br>Crisp, Brian F., Patrick Cuhna Silva, Santiago Olivella, and Guillermo Rosas. 2025. <i> Electoral System Incentives for Interparty and Intraparty Politics</i> New York: Oxford University Press, pp. 1–309.</p>
+							<a href="https://doi.org/10.1093/9780198956587.001.0001">[Oxford Academic - ebook]</a> 
+							<a href="https://global.oup.com/academic/product/electoral-system-incentives-for-interparty-and-intraparty-politics-9780198956556?cc=us&lang=en&">[Oxford University Press - Hard Copy]</a> 
+							<a href="https://www.amazon.com/Electoral-Incentives-Interparty-Intraparty-Comparative-ebook/dp/B0F9492YMH/ref=sr_1_4?dib=eyJ2IjoiMSJ9.k6Wg0hYfwBZqmbqqmXkH6-AlMnIe5ekCwha4roYZHbBPVXSjeNUNx886jYw3kXDhq3-liPhRvMvdcyZCh28O-w._zjvXDZoRxUqnZkrVCMklNmqEwlIMHf7OCfjEPmEIAw&dib_tag=se&qid=1748005245&refinements=p_27%3ABrian+F.+Crisp&s=books&sr=1-4">[Amazon]</a>
+							<a href="https://www.barnesandnoble.com/w/electoral-system-incentives-for-interparty-and-intraparty-politics-brian-f-crisp/1146868691;jsessionid=5450A869D0FA21FAC070008F73BF18BF.prodny_store02-atgap01?ean=9780198956563">[Barnes & Noble]</a>
 						</div>
 					</div>
 				</div>
