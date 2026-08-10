@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<!--
+  ===========================================================================
+  replication.html
+
+  Introduces the chapter replication pages on the project website.
+  Companion to the README in the code repository, with the technical
+  instructions removed.
+
+  TWO LINKS TO SET BEFORE POSTING
+  -------------------------------
+  1. Chapter pages are assumed to live in a subfolder named "replication/".
+     If they sit somewhere else, edit the href values in the chapter list
+     below -- they are the only relative links on the page.
+
+  2. The code repository is assumed to be
+     https://github.com/i3dataset/i3-replication
+     It appears in exactly two places, both marked with the comment
+     REPO LINK. Change both if the repository is named differently.
+  ===========================================================================
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Replication Files &middot; Electoral System Incentives</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --i3-crimson:      #db293f;
+  --i3-crimson-dark: #b81f33;
+  --i3-crimson-pale: #fbeaec;
+  --i3-blue:         #43bff0;
+  --i3-charcoal:     #3e3e3e;
+  --i3-grey:         #888888;
+  --i3-offwhite:     #fafafa;
+  --i3-lightgrey:    #f4f4f4;
+  --i3-rule:         #e6e6e6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #4a4a4a;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- navigation, mirroring the other pages on the site ---- */
+nav {
+  background: var(--i3-charcoal);
+  padding: 0 1.5em;
+}
+nav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 60em;
+  display: flex;
+  flex-wrap: wrap;
+}
+nav a {
+  display: block;
+  padding: 1em 1.15em;
+  color: #e8e8e8;
+  text-decoration: none;
+  font-size: 0.82em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+nav a:hover        { color: #fff; background: rgba(255,255,255,0.07); }
+nav a.current      { color: #fff; box-shadow: inset 0 -3px 0 0 var(--i3-crimson); }
+
+/* ---- page furniture ---- */
+main {
+  max-width: 47em;
+  margin: 0 auto;
+  padding: 3.5em 1.5em 5em;
+}
+
+h1 {
+  font-size: 2.3em;
+  line-height: 1.2;
+  color: var(--i3-charcoal);
+  font-weight: 700;
+  margin: 0 0 0.15em;
+  letter-spacing: -0.01em;
+}
+.subtitle {
+  font-size: 1.05em;
+  color: var(--i3-grey);
+  margin: 0 0 2.5em;
+}
+.subtitle em { font-style: italic; }
+
+h2 {
+  font-size: 1.4em;
+  color: var(--i3-charcoal);
+  font-weight: 700;
+  margin: 2.6em 0 0.7em;
+  padding-bottom: 0.35em;
+  border-bottom: 2px solid var(--i3-rule);
+}
+h3 {
+  font-size: 1.08em;
+  color: var(--i3-charcoal);
+  font-weight: 700;
+  margin: 1.9em 0 0.5em;
+}
+
+a       { color: var(--i3-crimson); text-decoration: none; border-bottom: 1px solid rgba(219,41,63,0.28); }
+a:hover { color: var(--i3-crimson-dark); border-bottom-color: var(--i3-crimson-dark); }
+
+strong { color: var(--i3-charcoal); font-weight: 700; }
+
+/* ---- the correction notices: the part of the page that must be seen ---- */
+.correction {
+  background: var(--i3-crimson-pale);
+  border-left: 5px solid var(--i3-crimson);
+  border-radius: 0 4px 4px 0;
+  padding: 1.4em 1.6em 1.5em;
+  margin: 1.6em 0;
+}
+.correction h3 {
+  margin-top: 0;
+  color: var(--i3-crimson-dark);
+  font-size: 1.05em;
+  letter-spacing: 0.02em;
+}
+.correction p:last-child { margin-bottom: 0; }
+
+.consequence {
+  background: #fff;
+  border: 1px solid rgba(219,41,63,0.3);
+  border-radius: 3px;
+  padding: 0.85em 1.1em;
+  margin-top: 1.1em;
+  font-size: 0.96em;
+}
+.consequence strong { color: var(--i3-crimson-dark); }
+
+/* ---- softer note, for things that are not errors ---- */
+.note {
+  background: var(--i3-offwhite);
+  border-left: 5px solid var(--i3-blue);
+  border-radius: 0 4px 4px 0;
+  padding: 1.2em 1.5em 1.3em;
+  margin: 1.6em 0;
+}
+.note h3 { margin-top: 0; font-size: 1.02em; }
+.note p:last-child { margin-bottom: 0; }
+
+/* ---- chapter index ---- */
+.chapters { list-style: none; margin: 1.2em 0 0; padding: 0; }
+.chapters li {
+  border-bottom: 1px solid var(--i3-rule);
+}
+.chapters li:first-child { border-top: 1px solid var(--i3-rule); }
+.chapters a {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9em;
+  padding: 0.85em 0.6em;
+  border-bottom: none;
+  color: var(--i3-charcoal);
+}
+.chapters a:hover { background: var(--i3-lightgrey); color: var(--i3-crimson-dark); }
+.chapters .num {
+  flex: none;
+  width: 2.1em;
+  font-weight: 700;
+  color: var(--i3-crimson);
+  font-size: 0.95em;
+}
+.chapters .flag {
+  flex: none;
+  font-size: 0.72em;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: #fff;
+  background: var(--i3-crimson);
+  border-radius: 2px;
+  padding: 0.15em 0.55em;
+  white-space: nowrap;
+}
+
+footer {
+  border-top: 1px solid var(--i3-rule);
+  margin-top: 3.5em;
+  padding-top: 1.6em;
+  font-size: 0.9em;
+  color: var(--i3-grey);
+}
+footer a { color: var(--i3-grey); border-bottom-color: rgba(136,136,136,0.4); }
+footer a:hover { color: var(--i3-crimson); }
+
+@media (max-width: 640px) {
+  main { padding-top: 2.2em; }
+  h1 { font-size: 1.8em; }
+  nav a { padding: 0.85em 0.8em; font-size: 0.75em; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <ul>
+    <li><a href="index.html">Homepage</a></li>
+    <li><a href="authors.html">The Authors</a></li>
+    <li><a href="book.html">The Book</a></li>
+    <li><a href="dashboard.html">The I3 Dashboard</a></li>
+    <li><a href="materials.html" class="current">Auxiliary Materials</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<h1>Replication Files</h1>
+<p class="subtitle">
+  Chapter-by-chapter code and results for Parts III and IV of
+  <em>Electoral System Incentives for Interparty and Intraparty Politics</em>
+</p>
+
+<p>
+  Each chapter of Parts III and IV — chapters 5 through 14 — has a page of its own
+  below. A chapter page reproduces every table and figure in that chapter, shows
+  the code that produced it, and explains what the code is doing. The explanations
+  assume no prior knowledge of R: they are written for readers who want to follow
+  the reasoning rather than only inspect the output.
+</p>
+
+<p>
+  Code is hidden or shown with the <strong>Code</strong> button at the top right of
+  each page, so the chapters can be read either as an account of the analysis or as
+  a working script.
+</p>
+
+<h2>Two corrections to the published book</h2>
+
+<p>
+  In preparing these materials we re-examined the code behind every table and
+  figure, and found two mistakes that survived into print. Both are described here
+  and again on the chapter pages themselves. In each case the published result is
+  reproduced <em>as published</em>, with the correction presented alongside it
+  rather than quietly in its place, so that readers can see exactly what changed.
+</p>
+
+<div class="correction">
+  <h3>Chapter 7 &middot; The Size of the Party System</h3>
+  <p>
+    When simulating expected values, five model runs should each have used an
+    imposed value of the Total Duvergerian Effect. Because a set of columns was
+    selected by position rather than by name, one of the five runs used the
+    observed values instead.
+  </p>
+  <div class="consequence">
+    <strong>Consequence.</strong> Figures 7.2 to 7.4 as printed show flatter
+    relationships and considerably wider confidence intervals than the corrected
+    code produces. The correction <em>strengthens</em> the chapter's findings: the
+    relationships are sharper and estimated far more precisely than the book
+    reports. The corrected figures are the ones shown here.
+  </div>
+</div>
+
+<div class="correction">
+  <h3>Chapter 12 &middot; Committee Systems and Assignments</h3>
+  <p>
+    In Model 3 of Table 12.1, a term intended to express committees per legislator
+    was placed outside the model formula. In that position R interpreted it not as
+    an offset but as a set of observation weights, so the published model weights
+    each legislature by the size of its chamber instead of modelling a rate.
+  </p>
+  <div class="consequence">
+    <strong>Consequence.</strong> Under the corrected specification the
+    coefficients on Average Personalism and the Total Duvergerian Effect in that
+    column are <em>no longer statistically significant</em>. Models 1 and 2 are
+    unaffected. Table 12.1 appears here as published, followed by a section giving
+    both the corrected specification and one with no offset at all.
+  </div>
+</div>
+
+<h2>Other things worth knowing</h2>
+
+<div class="note">
+  <h3>Two versions of the electoral system scores</h3>
+  <p>
+    The predicted scores for the Total Duvergerian Effect and Average Personalism
+    were revised during the project, and the later version covers slightly more
+    elections. Chapters 6 through 11 use the later scores. Chapter 12 uses the
+    earlier ones, because that is what the published Table 12.1 was computed from
+    and because that chapter uses the scores directly as explanatory variables.
+    Chapter 12 also re-runs its first half on the later scores, so readers can see
+    that its conclusions do not depend on the choice.
+  </p>
+</div>
+
+<div class="note">
+  <h3>A few figures will not reproduce exactly</h3>
+  <p>
+    Some steps of the analysis draw random numbers without fixing a starting point,
+    so they give slightly different results each time they are run. This affects
+    the appearance of three figures in chapter 6, where overlapping points are
+    nudged apart to keep them visible, and the confidence bands of Figure 9.5.
+    Everything else reproduces exactly. No substantive quantity is affected.
+  </p>
+</div>
+
+<div class="note">
+  <h3>How these pages were prepared</h3>
+  <p>
+    The analysis, the outline and a large part of the commentary are the authors'
+    own. After the book was in print we also used Anthropic's Claude (model Opus 5)
+    to check the integrity of the code, to annotate it so that readers can follow
+    the reasoning, and to help prepare these pages. The two corrections described
+    above came out of that review.
+  </p>
+</div>
+
+<h2>The chapters</h2>
+
+<ul class="chapters">
+  <li><a href="replication/05ComponentRulesIncentives.html"><span class="num">5</span><span>Component Rules and Interparty and Intraparty Incentives</span></a></li>
+  <li><a href="replication/06PlaceRealWorldElectoralSystemsInTheI-ISpace--real_systems.html"><span class="num">6</span><span>Placing &ldquo;Real-World&rdquo; Electoral Systems in the I&ndash;I Space</span></a></li>
+  <li><a href="replication/07TheSizeOfThePartySystem.html"><span class="num">7</span><span>The Size of the Party System</span><span class="flag">Correction</span></a></li>
+  <li><a href="replication/08TheIdeologicalLocationOfParties.html"><span class="num">8</span><span>The Distribution of Partisan Ideological Locations</span></a></li>
+  <li><a href="replication/09Congruence.html"><span class="num">9</span><span>Congruence</span></a></li>
+  <li><a href="replication/10Campaign_for_Office.html"><span class="num">10</span><span>Campaigns for Office</span></a></li>
+  <li><a href="replication/11ConstituencyService.html"><span class="num">11</span><span>Constituency Service</span></a></li>
+  <li><a href="replication/12LegislativeInstitutionsAndLegislativeBehavior.html"><span class="num">12</span><span>Committee Systems and Assignments</span><span class="flag">Correction</span></a></li>
+  <li><a href="replication/13PartyUnity.html"><span class="num">13</span><span>Party Unity</span></a></li>
+  <li><a href="replication/14PolicyOrPorkBarrel.html"><span class="num">14</span><span>Programmatic Policy or Pork Barrel</span></a></li>
+</ul>
+
+<h2>The code</h2>
+
+<p>
+  The R Markdown source behind these pages, together with the datasets needed to
+  run it, is available at
+  <!-- REPO LINK (1 of 2) -->
+  <a href="https://github.com/i3dataset/i3-replication">github.com/i3dataset/i3-replication</a>.
+  Each chapter page here corresponds to one file in that repository.
+</p>
+
+<p>
+  Every chapter page ends with a record of the software used to produce it — the
+  version of R and of each package — so that a reader who obtains a different
+  result can tell that apart from using different software.
+</p>
+
+<footer>
+  <p>
+    Brian F. Crisp, Patrick Cunha Silva, Santiago Olivella and Guillermo Rosas.
+    <em>Electoral System Incentives for Interparty and Intraparty Politics.</em>
+    Oxford University Press, 2025.
+  </p>
+  <p>
+    Please report any problems with these materials to
+    <a href="mailto:electoralrules@gmail.com">electoralrules@gmail.com</a> &middot;
+    <!-- REPO LINK (2 of 2) -->
+    <a href="https://github.com/i3dataset/i3-replication">Code repository</a> &middot;
+    <a href="materials.html">All auxiliary materials</a>
+  </p>
+</footer>
+
+</main>
+</body>
+</html>
