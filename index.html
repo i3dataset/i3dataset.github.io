@@ -25,6 +25,16 @@
 				margin-top: 0 !important;
 				padding-top: 0 !important;
 			}
+			/* ---------------------------------------------------------------------------
+			   Footer
+			   --------------------------------------------------------------------------- */
+			#footer { background-color: #303030; color: #999; padding: 4em 0; text-align: center; }
+			#footer h2, #footer h3 { color: #fff; }
+			#footer a { color: #fff !important; }
+			#footer a:hover { color: #43bff0 !important; }
+			#footer .cite { font-size: 0.95em; line-height: 1.8; }
+			#footer .links { margin-bottom: 0; font-size: 0.95em; }
+						
 		</style>		
 	</head>
 
@@ -37,18 +47,20 @@
 
 	  gtag('config', 'G-BNXNQY2PST');
 	</script>	
+
+
 	
 	<body class="is-preload">
 
 		<!-- Nav -->
 			<nav id="nav">
 				<ul class="container">
-    				<li><a href="index.html">Homepage</a></li>
+    				<li><a href="index.html" class="active">Homepage</a></li>
 				    <li><a href="authors.html">The Authors</a></li>
 				    <li><a href="book.html">The Book</a></li>
 				    <li><a href="dashboard.html">The I<sup>3</sup> Dashboard</a></li>
 				    <li><a href="materials.html">Auxiliary Materials</a></li>
-				    <li><a href="replication.html" class="active">Replication</a></li>		
+				    <li><a href="replication.html">Replication</a></li>		
 				</ul>
 			</nav>			
 
@@ -75,7 +87,7 @@
 						</div>
 					</div>
 				</div>
-			</article>
+			</article>			
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -84,6 +96,26 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+<!-- ======================= footer ======================= -->
+<footer id="footer">
+  <div class="container medium">
+    <p class="cite">
+      Brian F. Crisp, Patrick Cunha Silva, Santiago Olivella and Guillermo Rosas.<br>
+      <em>Electoral System Incentives for Interparty and Intraparty Politics.</em>
+      Oxford University Press, 2025.
+    </p>
+    <p class="links">
+      Please report any problems with these materials to
+      <a href="mailto:electoralrules@gmail.com">electoralrules@gmail.com</a>
+      &nbsp;&middot;&nbsp;
+      <!-- REPO LINK (2 of 2) -->
+      <a href="https://github.com/i3dataset/i3-replication">Code repository</a>
+      &nbsp;&middot;&nbsp;
+      <a href="materials.html">All auxiliary materials</a>
+    </p>
+  </div>
+</footer>
 
 	</body>
 </html>

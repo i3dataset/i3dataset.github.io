@@ -280,8 +280,8 @@ section h2:first-child { margin-top: 0; }
 <article id="top" class="wrapper style1">
   <div class="container medium">
     <header class="centered">
-      <h1>Replication <strong>Files</strong></h1>
-      <p class="tagline">
+      <h1 style="text-align: center">Replication Files</h1>
+      <p class="tagline"  style="color:black;">
         Chapter-by-chapter code and results for Parts III and IV of
         <em>Electoral System Incentives for Interparty and Intraparty Politics</em>
       </p>
@@ -292,14 +292,14 @@ section h2:first-child { margin-top: 0; }
 <!-- ======================= introduction ======================= -->
 <article class="wrapper style2">
   <div class="container medium">
-    <p class="lead">
+    <p class="lead", style="color:black; font-size: 2ex;">
       Each chapter of Parts III and IV &mdash; chapters 5 through 14 &mdash; has a
       page of its own. A chapter page reproduces every table and figure in that
       chapter, shows the code that produced it, and explains what the code is
       doing. The explanations assume no prior knowledge of R: they are written for
       readers who want to follow the reasoning, not only inspect the output.
     </p>
-    <p>
+    <p  style="color:black; font-size: 2ex;">
       Code is hidden or shown with the <strong>Code</strong> button at the top
       right of each page, so a chapter can be read either as an account of the
       analysis or as a working script.
@@ -311,7 +311,7 @@ section h2:first-child { margin-top: 0; }
 <article class="wrapper style3">
   <div class="container medium">
     <h2>Two corrections to the published book</h2>
-    <p>
+    <p  style="color:black; font-size: 2ex;">
       In preparing these materials we re-examined the code behind every table and
       figure, and found two mistakes that survived into print. Both are described
       here and again on the chapter pages themselves. In each case the published
@@ -322,13 +322,13 @@ section h2:first-child { margin-top: 0; }
 
     <div class="correction">
       <h3>Chapter 7 &middot; The Size of the Party System</h3>
-      <p>
+      <p  style="color:black; font-size: 2ex;">
         When simulating expected values, five model runs should each have used an
         imposed value of the Total Duvergerian Effect. Because a set of columns was
         selected by position rather than by name, one of the five runs used the
         observed values instead.
       </p>
-      <div class="consequence">
+      <div class="consequence"  style="color:black; font-size: 2ex;">
         <strong>Consequence.</strong> Figures 7.2 to 7.4 as printed show flatter
         relationships and considerably wider confidence intervals than the
         corrected code produces. The correction <em>strengthens</em> the chapter's
@@ -339,14 +339,14 @@ section h2:first-child { margin-top: 0; }
 
     <div class="correction">
       <h3>Chapter 12 &middot; Committee Systems and Assignments</h3>
-      <p>
+      <p  style="color:black; font-size: 2ex;">
         In Model 3 of Table 12.1, a term intended to express committees per
         legislator was placed outside the model formula. In that position R read it
         not as an offset but as a set of observation weights, so the published
         model weights each legislature by the size of its chamber instead of
         modelling a rate.
       </p>
-      <div class="consequence">
+      <div class="consequence"  style="color:black; font-size: 2ex;">
         <strong>Consequence.</strong> Under the corrected specification the
         coefficients on Average Personalism and the Total Duvergerian Effect in
         that column are <em>no longer statistically significant</em>. Models 1 and
@@ -365,7 +365,7 @@ section h2:first-child { margin-top: 0; }
 
     <div class="note">
       <h3>Two versions of the electoral system scores</h3>
-      <p>
+      <p  style="color:black; font-size: 2ex;">
         The predicted scores for the Total Duvergerian Effect and Average
         Personalism were revised during the project, and the later version covers
         slightly more elections. Chapters 6 through 11 use the later scores.
@@ -379,7 +379,7 @@ section h2:first-child { margin-top: 0; }
 
     <div class="note">
       <h3>A few figures will not reproduce exactly</h3>
-      <p>
+      <p  style="color:black; font-size: 2ex;">
         Some steps of the analysis draw random numbers without fixing a starting
         point, so they give slightly different results each time they run. This
         affects the appearance of three figures in chapter 6, where overlapping
@@ -391,7 +391,7 @@ section h2:first-child { margin-top: 0; }
 
     <div class="note">
       <h3>How these pages were prepared</h3>
-      <p>
+      <p  style="color:black; font-size: 2ex;">
         The analysis, the outline and a large part of the commentary are the
         authors' own. After the book was in print we also used Anthropic's Claude
         (model Opus 5) to check the integrity of the code, to annotate it so that
@@ -425,14 +425,14 @@ section h2:first-child { margin-top: 0; }
 <article class="wrapper style1">
   <div class="container medium">
     <h2>The code</h2>
-    <p>
+    <p  style="color:black; font-size: 2ex;">
       The R Markdown source behind these pages, together with the datasets needed
       to run it, is available at
       <!-- REPO LINK (1 of 2) -->
-      <a href="https://github.com/i3dataset/i3-replication">github.com/i3dataset/i3-replication</a>.
+      <a href="https://doi.org/10.7910/DVN/QL4GYW">Harvard Dataverse</a>.
       Each chapter page here corresponds to one file in that repository.
     </p>
-    <p>
+    <p  style="color:black; font-size: 2ex;">
       Every chapter page ends with a record of the software used to produce it
       &mdash; the version of R and of each package &mdash; so that a reader who
       obtains a different result can tell that apart from using different software.
@@ -453,7 +453,7 @@ section h2:first-child { margin-top: 0; }
       <a href="mailto:electoralrules@gmail.com">electoralrules@gmail.com</a>
       &nbsp;&middot;&nbsp;
       <!-- REPO LINK (2 of 2) -->
-      <a href="https://github.com/i3dataset/i3-replication">Code repository</a>
+      <a href="https://doi.org/10.7910/DVN/QL4GYW">Code repository</a>
       &nbsp;&middot;&nbsp;
       <a href="materials.html">All auxiliary materials</a>
     </p>
