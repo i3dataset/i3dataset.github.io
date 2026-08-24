@@ -35,7 +35,26 @@
 			#footer .cite { font-size: 0.95em; line-height: 1.8; }
 			#footer .links { margin-bottom: 0; font-size: 0.95em; }
 						
-		</style>		
+@media screen and (max-width: 980px) {
+  h1 { font-size: 2.5em; }
+  h2 { font-size: 1.75em; }
+  .wrapper { padding: 4em 0 4em 0; }
+}
+@media screen and (max-width: 736px) {
+  body { padding-top: 0; font-size: 12pt; }
+  #nav { position: relative; height: auto; line-height: 1.5; padding: 0.5em 0; }
+  #nav li { display: block; }
+  #nav a { height: auto; line-height: 2.5em; border-radius: 0; }
+  #nav a.active:before { display: none; }
+  h1 { font-size: 2em; }
+  h2 { font-size: 1.5em; }
+  h3 { font-size: 1.25em; }
+  .wrapper { padding: 3em 0 3em 0; }
+  #top { padding: 3em 0 3em 0; }
+  .correction, .note { padding: 1.25em 1.35em; }
+  .chapters a { flex-wrap: wrap; gap: 0.5em; }
+}
+</style>	
 	</head>
 
 	<!-- Google tag (gtag.js) -->
